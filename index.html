@@ -5,25 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вальдемар Бубен</title>
     <style>
-       
         body {
             background-color: #050505; 
             color: #b3b3b3;
             font-family: 'Courier New', Courier, monospace;
-            max-width: 650px;
+          
+            max-width: 900px; 
             margin: 60px auto;
             padding: 0 20px;
             line-height: 1.7;
             letter-spacing: 0.02em;
-            
-            
             cursor: crosshair; 
         }
 
-        
         ::selection {
             background: #222222;
             color: #ffffff;
+        }
+
+        
+        .main-container {
+            display: flex;
+            gap: 50px; 
+            align-items: flex-start;
+        }
+
+        
+        .sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 40px; 
+            border-right: 1px solid #141414;
+            padding-right: 20px;
+        }
+
+        
+        .content {
+            flex-grow: 1;
+            max-width: 650px;
+        }
+
+        .audio-item {
+            margin-bottom: 25px;
         }
 
         .post {
@@ -51,41 +75,80 @@
         a {
             color: #555555;
             text-decoration: none;
-            
         }
 
         a:hover {
             color: #888888; 
-            text-decoration: underline; 
-            cursor: crosshair; 
+            text-decoration: underline;
+            cursor: crosshair;
+        }
+
+        
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #141414;
+                padding-right: 0;
+                padding-bottom: 30px;
+                position: static;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div style="margin: 20px 0;">
     
-    <audio src="audio1.mp3" controls loop style="filter: invert(1); opacity: 0.6; width: 100%; max-width: 300px;"></audio>
-</div>
-    <!-- nacialo -->
+    <div class="main-container">
 
-    <!-- Пост 1 -->
-    <div class="post">
-        <div class="date">[ 18 сентября 2026 ]</div>
-        <p>test.</p>
-    </div>
-
-    <div class="post">
-        <div class="date">[ 18 сентября 2026 ]</div>
-        <p>Здравствуйте</p>
-        <img src="IMG_0312.jpeg" alt="Цитринитас" style="border: 1px solid #1a1a1a; max-width: 100%; height: auto; margin-top: 20px;">
-    </div>
-
-    <!-- conez -->
-
-    <!-- niz -->
-    <div class="footer">
         
+        <div class="sidebar">
+            
+            <div class="audio-item">
+                <div class="date">[ audio1 ]</div>
+                <audio src="audio1.mp3" controls loop style="filter: invert(0.9) hue-rotate(180deg); opacity: 0.5; width: 100%; height: 30px;"></audio>
+            </div>
+
+            <div class="audio-item">
+                <div class="date">[ audio2 ]</div>
+                <audio src="audio2.mp3" controls loop style="filter: invert(0.9) hue-rotate(180deg); opacity: 0.5; width: 100%; height: 30px;"></audio>
+            </div>
+
+            <div class="audio-item">
+                <div class="date">[ audio3 ]</div>
+                <audio src="audio3.mp3" controls loop style="filter: invert(0.9) hue-rotate(180deg); opacity: 0.5; width: 100%; height: 30px;"></audio>
+            </div>
+
+        </div>
+
+
+        
+        <div class="content">
+
+            <!-- 1 -->
+            <div class="post">
+                <div class="date">[ 18 сентября 2026 ]</div>
+                <p>test.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="post">
+                <div class="date">[ 18 сентября 2026 ]</div>
+                <p>Здравствуйте</p>
+                <img src="IMG_0312.jpeg" alt="" style="border: 1px solid #1a1a1a; max-width: 100%; height: auto; margin-top: 20px;">
+            </div>
+
+        </div>
+
+    </div> 
+
+
+    
+    <div class="footer">
         <p>Для нестерпимой связи: <a href="mailto:isidordukass@gmail.com">isidordukass@gmail.com</a></p>
     </div>
 
