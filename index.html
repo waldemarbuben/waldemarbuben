@@ -15,16 +15,23 @@
             padding: 0 20px;
             line-height: 1.7;
             letter-spacing: 0.02em;
+            
+            
+            cursor: crosshair; 
         }
 
         
+        ::selection {
+            background: #222222;
+            color: #ffffff;
+        }
+
         .post {
             margin-bottom: 80px;
             padding-bottom: 40px;
             border-bottom: 1px solid #141414;
         }
 
-        
         .date {
             color: #444444; 
             font-size: 0.85em;
@@ -32,7 +39,6 @@
             text-transform: lowercase;
         }
 
-        
         .footer {
             margin-top: 120px;
             padding-top: 20px;
@@ -45,11 +51,13 @@
         a {
             color: #555555;
             text-decoration: none;
-            transition: color 0.3s ease;
+            
         }
 
         a:hover {
             color: #888888; 
+            text-decoration: underline; 
+            cursor: crosshair; 
         }
     </style>
 </head>
@@ -68,13 +76,12 @@
         <p>Здравствуйте</p>
     </div>
 
-
     <!-- conez -->
 
     <!-- niz -->
     <div class="footer">
-        <p>Для нестерпимой связи: <a href="mailto:isidordukass@gmail.com">isidordukass@gmail.com</a>
-</p>
+        
+        <p>Для нестерпимой связи: <a href="mailto:isidordukass@gmail.com">isidordukass@gmail.com</a></p>
     </div>
 
 </body>
