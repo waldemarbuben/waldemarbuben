@@ -9,15 +9,17 @@
             background-color: #050505; 
             color: #b3b3b3;
             font-family: 'Courier New', Courier, monospace;
-          
-            max-width: 900px; 
+            
+            max-width: 1050px; 
             margin: 60px auto;
             padding: 0 20px;
             line-height: 1.7;
             letter-spacing: 0.02em;
-            cursor: crosshair; 
+            
+            
         }
 
+        
         ::selection {
             background: #222222;
             color: #ffffff;
@@ -26,13 +28,13 @@
         
         .main-container {
             display: flex;
-            gap: 50px; 
+            gap: 40px; 
             align-items: flex-start;
         }
 
         
-        .sidebar {
-            width: 220px;
+        .sidebar-left {
+            width: 200px;
             flex-shrink: 0;
             position: sticky;
             top: 40px; 
@@ -43,7 +45,25 @@
         
         .content {
             flex-grow: 1;
-            max-width: 650px;
+            max-width: 600px;
+        }
+
+        
+        .sidebar-right {
+            width: 120px; 
+            flex-shrink: 0;
+            position: sticky;
+            top: 40px; 
+        }
+
+        
+        .divine-image {
+            width: 100%;
+            height: auto;
+            max-height: 80vh; 
+            object-fit: contain; 
+            border: 1px solid #141414; 
+            opacity: 0.6; 
         }
 
         .audio-item {
@@ -87,15 +107,18 @@
         @media (max-width: 768px) {
             .main-container {
                 flex-direction: column;
-                gap: 40px;
+                gap: 30px;
             }
-            .sidebar {
+            .sidebar-left {
                 width: 100%;
                 border-right: none;
                 border-bottom: 1px solid #141414;
                 padding-right: 0;
-                padding-bottom: 30px;
+                padding-bottom: 20px;
                 position: static;
+            }
+            .sidebar-right {
+                display: none; 
             }
         }
     </style>
@@ -106,7 +129,7 @@
     <div class="main-container">
 
         
-        <div class="sidebar">
+        <div class="sidebar-left">
             
             <div class="audio-item">
                 <div class="date">[ audio1 ]</div>
@@ -144,7 +167,20 @@
 
         </div>
 
+
+        <!-- kollona -->
+        <div class="sidebar-right">
+            
+            <img src="IMG_0100.jpg" alt="manifestation" class="divine-image">
+        </div>
+
     </div> 
+
+
+    
+    <p style="color: #050505; font-size: 0.75em; text-align: center; margin-top: 50px;">
+        Тот, кто идет против дня, не должен бояться ночи
+    </p>
 
 
     
