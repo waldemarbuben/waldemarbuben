@@ -127,14 +127,29 @@
 
         
         @media (max-width: 950px) {
+            body {
+                margin: 20px auto; 
+            }
             .main-container {
                 flex-direction: column;
                 gap: 30px;
             }
-            .sidebar-left, .content {
+            
+            .sidebar-left {
                 width: 100%;
                 max-width: 100%;
                 box-sizing: border-box;
+                position: static; 
+                border-right: none;
+                border-bottom: 1px solid #141414;
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+            .content {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding: 30px 20px; 
             }
             .sidebar-right {
                 display: none; 
